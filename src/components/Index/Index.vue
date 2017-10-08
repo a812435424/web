@@ -37,9 +37,9 @@
         display: inline-block;
         position: relative;
         width: auto;
-        font-size: 40px;
+        font-size: 28px;
         line-height: 70px;
-        color: #3fabf5;
+        color: #fff;
         margin-bottom: 30px;
     }
     
@@ -50,7 +50,14 @@
         left: 0;
         width: 100%;
         height: 1px;
-        background: #fff;
+        background: #3fabf5;
+        animation: bottom_to 2s;
+        -moz-animation: bottom_to 2s;
+        /* Firefox */
+        -webkit-animation: bottom_to 2s;
+        /* Safari 和 Chrome */
+        -o-animation: bottom_to 2s;
+        /* Opera */
     }
     
     .about {
@@ -239,6 +246,42 @@
         to {
             margin-top: 0;
             opacity: 1;
+        }
+    }
+    
+    @keyframes bottom_to {
+        60% {
+            bottom: 10px;
+        }
+        100% {
+            bottom: 0;
+        }
+    }
+    
+    @-moz-keyframes bottom_to {
+        60% {
+            bottom: 10px;
+        }
+        100% {
+            bottom: 0;
+        }
+    }
+    
+    @-webkit-keyframes bottom_to {
+        60% {
+            bottom: 10px;
+        }
+        100% {
+            bottom: 0;
+        }
+    }
+    
+    @-o-keyframes bottom_to {
+        60% {
+            bottom: 10px;
+        }
+        100% {
+            bottom: 0;
         }
     }
 </style>
