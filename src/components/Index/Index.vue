@@ -6,12 +6,12 @@
         <div class="title">About</div>
         <h5>
           <span>Hello,</span>
-          <em>我是王凯 , 一个web前端工程师</em>
-          <p>For me design is not about pixel perfect layouts, it’s about solving problems and connecting people. I design with a user centered approach to create thoughtful experiences, & have done so with companies including: Comcast, HBO, Tindall, The Cliffs, & Fatz. I focus on designing interfaces with tools like Sketch, Framer, and Invision, & I don’t shy away from building them either.</p>
+          <em>我是{{details.user_name}} , 一个{{details.job}}</em>
+          <p>{{details.introduce}}</p>
           <div class="line">
-            <a href="" target="_blank">QQ</a>
-            <a href="" target="_blank">微信</a>
-            <a href="" target="_blank">邮箱</a>
+            <template v-for="item in details.contact_way">
+              <a :href="item.href" target="_blank">{{item.title}}</a>
+            </template>
             <a href="" target="_blank">简历</a>
           </div>
         </h5>
@@ -22,44 +22,28 @@
 </template>
 
 <script>
+    import axios from 'axios'
     export default {
         name: 'index',
         data() {
             return {
-                msg: 'Welcome to Your Vue.js App'
+              details:{}
             }
+        },
+        created() {
+            axios.get('static/data.json', {
+                params: {
+                    ID: 12345
+                }
+            }).then((res) => {
+                this.details = res.data.details;
+
+            })
         }
     }
 </script>
 
 <style>
-    .title {
-        display: inline-block;
-        position: relative;
-        width: auto;
-        font-size: 28px;
-        line-height: 70px;
-        color: #fff;
-        margin-bottom: 30px;
-    }
-    
-    .title:after {
-        content: "";
-        position: absolute;
-        bottom: 0px;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background: #3fabf5;
-        animation: bottom_to 2s;
-        -moz-animation: bottom_to 2s;
-        /* Firefox */
-        -webkit-animation: bottom_to 2s;
-        /* Safari 和 Chrome */
-        -o-animation: bottom_to 2s;
-        /* Opera */
-    }
-    
     .about {
         overflow: hidden;
         position: relative;
@@ -76,7 +60,7 @@
         align-items: center;
         font-family: "Poppins";
     }
-    
+
     .about img {
         position: absolute;
         left: 10%;
@@ -91,7 +75,7 @@
         -o-animation: left_to 1.5s;
         /* Opera */
     }
-    
+
     .about_txt {
         position: absolute;
         right: 0;
@@ -99,45 +83,45 @@
         width: 40%;
         opacity: 1;
         margin-right: 80px;
-        animation: top_to 2s;
-        -moz-animation: top_to 2s;
+        animation: top_to 1.5s;
+        -moz-animation: top_to 1.5s;
         /* Firefox */
-        -webkit-animation: top_to 2s;
+        -webkit-animation: top_to 1.5s;
         /* Safari 和 Chrome */
-        -o-animation: top_to 2s;
+        -o-animation: top_to 1.5s;
         /* Opera */
     }
-    
+
     .about_txt h5 {
         font-size: 36px;
         line-height: 1.5;
     }
-    
+
     .about_txt h5 span {
         font-size: 40px;
     }
-    
+
     .about_txt em {
         display: block;
         letter-spacing: 5px;
     }
-    
+
     .about_txt p {
         font-size: 16px;
         margin: 20px 0;
         line-height: 28px;
     }
-    
+
     .line {
         font-size: 16px;
         line-height: 28px;
     }
-    
+
     .line a {
         margin-right: 40px;
         position: relative;
     }
-    
+
     .line a:after {
         content: "";
         position: absolute;
@@ -155,12 +139,12 @@
         -o-transition: all 0.5s;
         /* Opera */
     }
-    
+
     .line a:hover:after {
         width: 100%;
         opacity: 0.9;
     }
-    
+
     @keyframes left_to {
         from {
             left: -60%;
@@ -171,7 +155,7 @@
             opacity: 1;
         }
     }
-    
+
     @-moz-keyframes left_to {
         from {
             left: -60%;
@@ -182,7 +166,7 @@
             opacity: 1;
         }
     }
-    
+
     @-webkit-keyframes left_to {
         from {
             left: -60%;
@@ -193,7 +177,7 @@
             opacity: 1;
         }
     }
-    
+
     @-o-keyframes left_to {
         from {
             left: -60%;
@@ -204,7 +188,7 @@
             opacity: 1;
         }
     }
-    
+
     @keyframes top_to {
         from {
             margin-top: -60%;
@@ -215,7 +199,7 @@
             opacity: 1;
         }
     }
-    
+
     @-moz-keyframes top_to {
         from {
             margin-top: -60%;
@@ -226,7 +210,7 @@
             opacity: 1;
         }
     }
-    
+
     @-webkit-keyframes top_to {
         from {
             margin-top: -60%;
@@ -237,7 +221,7 @@
             opacity: 1;
         }
     }
-    
+
     @-o-keyframes top_to {
         from {
             margin-top: -60%;
@@ -246,42 +230,6 @@
         to {
             margin-top: 0;
             opacity: 1;
-        }
-    }
-    
-    @keyframes bottom_to {
-        60% {
-            bottom: 10px;
-        }
-        100% {
-            bottom: 0;
-        }
-    }
-    
-    @-moz-keyframes bottom_to {
-        60% {
-            bottom: 10px;
-        }
-        100% {
-            bottom: 0;
-        }
-    }
-    
-    @-webkit-keyframes bottom_to {
-        60% {
-            bottom: 10px;
-        }
-        100% {
-            bottom: 0;
-        }
-    }
-    
-    @-o-keyframes bottom_to {
-        60% {
-            bottom: 10px;
-        }
-        100% {
-            bottom: 0;
         }
     }
 </style>
