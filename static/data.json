@@ -1,0 +1,131 @@
+{
+    "details": {
+        "user_name": "张三",
+        "english_name": "Zhang san",
+        "sex": "男",
+        "age": "24",
+        "date": "1994-04-29",
+        "address": "四川成都",
+        "school": "西华大学凤凰学院计算机信息管理",
+        "degree": "大专",
+        "job": "web前端工程师",
+        "logo": "/static/img/logo.png",
+        "introduce": "For me design is not about pixel perfect layouts, it’s about solving problems and connecting people. I design with a user centered approach to create thoughtful experiences, & have done so with companies including: Comcast, HBO, Tindall, The Cliffs, & Fatz. I focus on designing interfaces with tools like Sketch, Framer, and Invision, & I don’t shy away from building them either.",
+        "contact_way": [{
+            "title": "QQ",
+            "icon": "&#xe63a;",
+            "href": "http://www.baidu.com/"
+        }, {
+            "title": "邮箱",
+            "icon": "&#xe678;",
+            "href": "http://www.baidu.com/"
+        }, {
+            "title": "微信",
+            "icon": "&#xe6f2;",
+            "href": "http://www.baidu.com/"
+        }]
+    },
+    "skills": {
+        "skill": [{
+            "title": "Html 5 & CSS 3",
+            "grasp": "90%"
+        }, {
+            "title": "Javascript",
+            "grasp": "50%"
+        }, {
+            "title": "Jquery",
+            "grasp": "90%"
+        }, {
+            "title": "Vue.js",
+            "grasp": "50%"
+        }, {
+            "title": "Photoshop & Illustrator",
+            "grasp": "60%"
+        }],
+        "education": {
+            "school": [{
+                "title": "西华大学凤凰学院",
+                "professional": "计算机信息管理系",
+                "degree": "大专",
+                "time": "2012"
+            }],
+            "end_time": "2015"
+        },
+        "wokes": {
+            "company": [{
+                "title": "四川逸都科技有限公司",
+                "professional": "技术部",
+                "degree": "前端工程师",
+                "time": "2016"
+            }, {
+                "title": "成都多享科技有限公司",
+                "professional": "技术部",
+                "degree": "前端工程师",
+                "time": "2017"
+            }],
+            "end_time": ""
+        }
+    },
+    "like": [{
+        "icon": "&#xe65e;",
+        "title": "游戏"
+    }, {
+        "icon": "&#xe60d;",
+        "title": "电影"
+    }, {
+        "icon": "&#xe61f;",
+        "title": "动漫"
+    }, {
+        "icon": "&#xe63e;",
+        "title": "看书"
+    }, {
+        "icon": "&#xe69b;",
+        "title": "钓鱼"
+    }],
+    "projects": {
+        "tab": [{
+            "title": "All",
+            "id": 0
+        }, {
+            "title": "PC",
+            "id": 1
+        }, {
+            "title": "WAP",
+            "id": 2
+        }, {
+            "title": "响应式",
+            "id": 3
+        }],
+        "project": [{
+            "id": 1,
+            "title": "吉材易达",
+            "img": "/static/img/p.png",
+            "href": "http://m.jicaiyida.com/"
+        }, {
+            "id": 2,
+            "title": "科理特",
+            "img": "/static/img/p.png",
+            "href": "http://m.jicaiyida.com/"
+        }, {
+            "id": 1,
+            "title": "吉材易达",
+            "img": "/static/img/p.png",
+            "href": "http://m.jicaiyida.com/"
+        }, {
+            "id": 2,
+            "title": "科理特",
+            "img": "/static/img/p.png",
+            "href": "http://m.jicaiyida.com/"
+        }, {
+            "id": 1,
+            "title": "吉材易达",
+            "img": "/static/img/p.png",
+            "href": "http://m.jicaiyida.com/"
+        }, {
+            "id": 2,
+            "title": "科理特",
+            "img": "/static/img/p.png",
+            "href": "http://m.jicaiyida.com/"
+        }]
+    }
+}

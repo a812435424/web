@@ -63,6 +63,16 @@
             </ul>
           </div>
           <div class="title">娱乐兴趣</div>
+          <div class="like">
+            <ul>
+              <template v-for="item in like">
+              <li>
+                <i class="iconfont" v-html="item.icon"></i>
+                <span>{{item.title}}</span>
+              </li>
+              </template>
+            </ul>
+          </div>
         </div>
 
       </div>
@@ -75,7 +85,8 @@
         name: 'skills',
         data() {
             return {
-              skills:{}
+              skills:{},
+              like:{}
             }
         },
         created() {
@@ -85,6 +96,7 @@
                 }
             }).then((res) => {
                 this.skills = res.data.skills;
+                this.like = res.data.like;
             })
         }
     }
@@ -164,6 +176,16 @@
     .education_txt h5{font-size:18px; line-height:45px;}
     .education_endtime{position:absolute; top:0; right:-20px; font-size:18px; line-height:24px;}
     .education_endtime em{width:2px;height:34px; background:#fff; display:block; position:absolute; top:34px; right:20px;}
+    .like{overflow:hidden;}
+    .like ul li{display:inline-block;text-align:center; line-height:40px; margin: 0 15px 30px 0;}
+    .like ul li i{width:106px; height:106px; border:1px solid #333; display:block; line-height:106px; background:rgba(95,95,95,0.2); font-size:72px; color:#eee;cursor: pointer;transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        /* Firefox 4 */
+        -webkit-transition: all 0.5s;
+        /* Safari 和 Chrome */
+        -o-transition: all 0.5s;
+        /* Opera */}
+    .like ul li i:hover{background:rgba(95,95,95,0.4); color:#3fabf5;}
     @keyframes width_to {
             0% {
                 width: 0px;

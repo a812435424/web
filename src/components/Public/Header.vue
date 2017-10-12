@@ -25,6 +25,12 @@
                 <span>Projects</span>
               </router-link>
             </li>
+            <li>
+              <router-link to="/Subarea">
+                <i class="iconfont">&#xe620;</i>
+                <span>Subarea</span>
+              </router-link>
+            </li>
           </ul>
         </div>
         <div class="contact">
